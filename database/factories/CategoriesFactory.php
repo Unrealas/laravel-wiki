@@ -1,0 +1,11 @@
+<?php
+
+use App\Category;
+use Faker\Generator as Faker;
+
+$factory->define(Category::class, function (Faker $faker) {
+    return [
+        'title' => $faker ->text(150),
+        'order' => rand(0,1)
+    ];
+});
